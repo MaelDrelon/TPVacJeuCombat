@@ -141,7 +141,8 @@ if (isset($perso)) // Si on utilise un personnage ou après en avoir créer un.
         </legend>
       <p>
         <div id="text"><p>Nom : <?= htmlspecialchars($perso->nom()) ?></p>
-        <p>Dégâts : <?= $perso->degats() ?></p></div>
+        <p>Dégâts : <?= $perso->degats() ?></p>
+        </div>
       </p>
     </fieldset>
     

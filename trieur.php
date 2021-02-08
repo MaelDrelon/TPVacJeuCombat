@@ -17,8 +17,7 @@ class PersonnagesManager
     
     $perso->hydrate([
       'id' => $this->_db->lastInsertId(),
-      'degats' => 0,
-    ]);
+      'degats' => 0,]);
   }
   
 

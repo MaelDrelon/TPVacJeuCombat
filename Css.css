@@ -5,8 +5,8 @@ body{
 }
 
 #horl{
-    
-    text-align : bottom;
+    position: absolute;
+    bottom: 0;
 }
 
 #center{

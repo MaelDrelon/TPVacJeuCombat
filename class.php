@@ -4,6 +4,7 @@ class Personnage
   private $_degats,
           $_id,
           $_nom;
+
   
   const CEST_MOI = 1; // Constante renvoyée par la méthode `frapper` si on se frappe soi-même.
   const PERSONNAGE_TUE = 2; // Constante renvoyée par la méthode `frapper` si on a tué le personnage en le frappant.
@@ -27,14 +28,14 @@ class Personnage
     // Puis on retourne la valeur renvoyée par la méthode : self::PERSONNAGE_TUE ou self::PERSONNAGE_FRAPPE
     return $perso->recevoirDegats();
   }
-  
+
 
   public function hydrate(array $donnees)
   {
     foreach ($donnees as $key => $value)
     {
       $method = 'set'.ucfirst($key);
-      
+
       if (method_exists($this, $method))
       {
         $this->$method($value);
@@ -84,7 +85,7 @@ class Personnage
   {
     return $this->_nom;
   }
-  
+
 
   public function setDegats($degats) //Ajoute les dégats si frappé par un perso
   {
@@ -115,4 +116,5 @@ class Personnage
       $this->_nom = $nom;
     }
   }
+
 }
